@@ -868,15 +868,19 @@ ul {
     }
 
     .nav-menu.active {
-        max-height: 500px;
+        max-height: 800px;
         padding: 20px 0;
     }
 
     .nav-item {
         width: 100%;
-        text-align: center;
         padding: 10px 0;
         border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-link {
+        padding: 10px 20px;
+        justify-content: flex-start;
     }
 
     .dropdown {
@@ -888,15 +892,37 @@ ul {
         max-height: 0;
         overflow: hidden;
         transition: var(--transition);
+        background-color: var(--light-color);
+    }
+
+    .dropdown-item {
+        padding: 10px 20px 10px 40px;
+    }
+
+    .dropdown-link {
+        text-align: left;
     }
 
     .nav-item.active .dropdown {
-        max-height: 500px;
+        max-height: 600px;
     }
 
     .top-bar-content {
-        flex-direction: column;
-        gap: 10px;
+        justify-content: center;
+    }
+
+    .top-bar-left {
+        display: none;
+    }
+
+    .top-bar-right {
+        display: none;
+    }
+
+    .top-bar-content::before {
+        content: 'Asuwaju Odusote Humanitarian Foundation';
+        font-weight: 600;
+        font-size: 0.95rem;
         text-align: center;
     }
 
