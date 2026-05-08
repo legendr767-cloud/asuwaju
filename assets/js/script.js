@@ -110,33 +110,32 @@ window.addEventListener('scroll', function() {
 });
 
 // ========================================
-// FORM VALIDATION
+// FORM VALIDATION (Compatible with Netlify Forms)
 // ========================================
 const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
         const name = this.querySelector('input[name="name"]').value.trim();
         const email = this.querySelector('input[name="email"]').value.trim();
         const message = this.querySelector('textarea[name="message"]').value.trim();
         
         // Basic validation
         if (!name || !email || !message) {
+            e.preventDefault();
             alert('Please fill in all fields');
-            return;
+            return false;
         }
         
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
+            e.preventDefault();
             alert('Please enter a valid email address');
-            return;
+            return false;
         }
         
-        // Success message (in production, this would submit to a server)
-        alert('Thank you for your message! We will get back to you soon.');
-        this.reset();
+        // Form will submit naturally to Netlify
+        // Netlify will handle the redirect and success message
     });
 }
 
