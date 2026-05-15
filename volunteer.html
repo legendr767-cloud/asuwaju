@@ -210,8 +210,18 @@
         <div class="container">
             <h2 class="section-title">Apply to Volunteer</h2>
             <div style="max-width: 700px; margin: 0 auto;">
-                <div class="contact-form">
-                    <form name="volunteer-application" method="POST" data-netlify="true" action="/volunteer.html">
+                <div class="contact-form" id="volunteer-form-wrap">
+
+                    <div id="form-success" style="display:none; text-align:center; padding: 60px 30px;">
+                        <div style="width:72px; height:72px; background:#e8f7ee; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px;">
+                            <i class="fas fa-check-circle" style="font-size:2.2rem; color:#0b5a3d;"></i>
+                        </div>
+                        <h3 style="font-size:1.6rem; font-weight:800; color:#0b5a3d; margin-bottom:12px;">Application Received!</h3>
+                        <p style="color:#444; font-size:1.05rem; line-height:1.75; max-width:480px; margin:0 auto 28px;">Thank you for applying to volunteer with AOHF. We have received your information and will review your application shortly. We will get back to you as soon as possible.</p>
+                        <p style="color:#888; font-size:0.92rem;">If you have any urgent questions, reach us at <a href="mailto:asuwajuodusote@aohfs.com" style="color:#0b5a3d; font-weight:600;">asuwajuodusote@aohfs.com</a></p>
+                    </div>
+
+                    <form id="volunteer-form" name="volunteer-application" method="POST" data-netlify="true" action="/volunteer.html">
                         <input type="hidden" name="form-name" value="volunteer-application">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
@@ -262,7 +272,8 @@
                             <textarea id="motivation" name="motivation" required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                        <button type="submit" class="btn btn-primary" id="submit-btn">Submit Application</button>
+                        <p id="form-error" style="display:none; color:#c0392b; margin-top:14px; font-size:0.95rem; text-align:center;"><i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again or email us directly.</p>
                     </form>
                 </div>
             </div>
@@ -332,5 +343,37 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script>
+        const volunteerForm = document.getElementById('volunteer-form');
+        const formSuccess  = document.getElementById('form-success');
+        const formError    = document.getElementById('form-error');
+        const submitBtn    = document.getElementById('submit-btn');
+
+        volunteerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            formError.style.display = 'none';
+
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(new FormData(volunteerForm)).toString()
+            })
+            .then(function(response) {
+                if (response.ok || response.status === 200 || response.redirected) {
+                    volunteerForm.style.display = 'none';
+                    formSuccess.style.display   = 'block';
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(function() {
+                submitBtn.disabled    = false;
+                submitBtn.textContent = 'Submit Application';
+                formError.style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
