@@ -23,6 +23,11 @@
     .read-more-row { max-width:900px; margin:0 auto 40px; padding:0 20px; display:flex; gap:12px; flex-wrap:wrap; }
     .btn { background:#0b5a3d; color:#fff; padding:10px 16px; border-radius:6px; text-decoration:none; font-weight:600; }
     @media (max-width:600px) { .post-hero img { height:220px; } }
+    .project-gallery { max-width:1100px; margin:40px auto; padding:0 20px; }
+    .project-gallery h2 { color:#0b5a3d; margin-bottom:20px; font-size:1.5rem; }
+    .gallery-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); gap:16px; }
+    .gallery-grid img { width:100%; height:220px; object-fit:cover; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1); cursor:pointer; transition:transform 0.2s; }
+    .gallery-grid img:hover { transform:scale(1.03); }
   </style>
     <style>
         body { position: static !important; overflow: auto !important; }
@@ -98,6 +103,7 @@
                             <li class="dropdown-item"><a href="../healthcare.html" class="dropdown-link">Healthcare Initiatives</a></li>
                             <li class="dropdown-item"><a href="../mosque-construction.html" class="dropdown-link">Mosque Construction</a></li>
                             <li class="dropdown-item"><a href="../srhr.html" class="dropdown-link">SRHR</a></li>
+                            <li class="dropdown-item"><a href="../youth-tech-empowerment.html" class="dropdown-link">Empowerment and Youth Development</a></li>
                         </ul>
                     </li>
                     
@@ -136,7 +142,7 @@
     </header>
 
 <div class="post-hero">
-  <img src="featured blog images/WhatsApp Image 2026-05-03 at 17.14.50.jpeg" alt="Ibefun Ilado Mosque Project">
+  <img src="featured blog images/mosque 2.jpeg" alt="Ibefun Ilado Mosque Project">
 </div>
 
 <div class="post-meta">
@@ -259,6 +265,18 @@
 
   <p><strong>Join us in building this mosque and providing clean water. Together, we can transform Ibefun Ilado.</strong></p>
 </article>
+
+<section class="project-gallery">
+  <h2>Project Gallery</h2>
+  <div class="gallery-grid">
+    <img src="featured blog images/mosque.jpeg" alt="Ibefun Ilado Mosque">
+    <img src="featured blog images/WhatsApp Image 2026-05-03 at 17.15.27.jpeg" alt="Ibefun Ilado Mosque construction">
+    <img src="featured blog images/WhatsApp Image 2026-05-03 at 17.16.41.jpeg" alt="Ibefun Ilado Mosque construction">
+    <img src="featured blog images/WhatsApp Image 2026-05-03 at 17.17.10.jpeg" alt="Ibefun Ilado Mosque construction">
+    <img src="featured blog images/borehole.jpeg" alt="Ibefun Ilado water borehole project">
+    <img src="featured blog images/bore 2.jpeg" alt="Ibefun Ilado clean water project">
+  </div>
+</section>
 
 <div class="post-footer">
   <p><strong>For more information or to discuss partnership opportunities, please contact us. We welcome visits to the project site.</strong></p>

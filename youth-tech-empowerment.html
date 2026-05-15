@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AOHF Empowerment and Youth Development Program - Equipping young Nigerians with cutting-edge technology skills in electronics, robotics, software development, cybersecurity and more.">
+    <title>Empowerment and Youth Development Program - AOHF</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-icon.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tech-hero {
+            background: linear-gradient(to bottom, rgba(4,16,12,0.68) 0%, rgba(4,16,12,0.42) 50%, rgba(4,16,12,0.72) 100%), url('images for empowerment/futuristic-scene-with-high-tech-robot-used-construction-industry.jpg') center/cover no-repeat;
+            padding: 120px 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .tech-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+            animation: pulse-bg 6s ease-in-out infinite;
+        }
+        @keyframes pulse-bg {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .tech-hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+            position: relative;
+        }
+        .tech-hero p {
+            font-size: 1.2rem;
+            opacity: 0.92;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+            position: relative;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 50px;
+            padding: 6px 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        .programs-section {
+            padding: 80px 20px;
+            background: #f8fdf8;
+        }
+        .programs-section .container { max-width: 1200px; margin: 0 auto; }
+        .section-label {
+            text-align: center;
+            color: #0b5a3d;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .section-heading {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1a1a2e;
+            margin-bottom: 16px;
+        }
+        .section-subtext {
+            text-align: center;
+            color: #555;
+            font-size: 1.05rem;
+            max-width: 680px;
+            margin: 0 auto 60px;
+            line-height: 1.75;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 30px;
+        }
+        .tech-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 36px 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            border-top: 4px solid #0b5a3d;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .tech-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+        }
+        .tech-card-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #0b5a3d, #1a8a5f);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+        }
+        .tech-card-icon i {
+            font-size: 1.7rem;
+            color: #fff;
+        }
+        .tech-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+        }
+        .tech-card p {
+            color: #555;
+            font-size: 0.97rem;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+        .tech-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .tech-card ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 6px 0;
+            font-size: 0.92rem;
+            color: #444;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .tech-card ul li:last-child { border-bottom: none; }
+        .tech-card ul li i {
+            color: #0b5a3d;
+            font-size: 0.8rem;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        .why-section {
+            padding: 80px 20px;
+            background: #fff;
+        }
+        .why-section .container { max-width: 1100px; margin: 0 auto; }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+            margin-top: 50px;
+        }
+        .why-card {
+            text-align: center;
+            padding: 36px 24px;
+            background: #f8fdf8;
+            border-radius: 12px;
+        }
+        .why-card .why-icon {
+            font-size: 2.4rem;
+            color: #0b5a3d;
+            margin-bottom: 18px;
+        }
+        .why-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+        .why-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+        .impact-banner {
+            background: linear-gradient(135deg, #0b5a3d, #1a8a5f);
+            padding: 70px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .impact-banner .container { max-width: 1000px; margin: 0 auto; }
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 50px 0;
+        }
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .stat-item p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+        .curriculum-section {
+            padding: 80px 20px;
+            background: #f0f9f4;
+        }
+        .curriculum-section .container { max-width: 1000px; margin: 0 auto; }
+        .curriculum-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .curriculum-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: #fff;
+            padding: 22px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+        .curriculum-item .num {
+            background: #0b5a3d;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .curriculum-item h5 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+        .curriculum-item p {
+            font-size: 0.88rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .cta-section {
+            padding: 80px 20px;
+            background: #fff;
+            text-align: center;
+        }
+        .cta-box {
+            max-width: 780px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #0b5a3d, #1a8a5f);
+            border-radius: 18px;
+            padding: 60px 40px;
+            color: #fff;
+        }
+        .cta-box h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .cta-box p {
+            font-size: 1.05rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-white {
+            background: #fff;
+            color: #0b5a3d;
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+        .btn-white:hover { opacity: 0.9; }
+        .btn-outline-white {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.7);
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+        .btn-outline-white:hover { background: rgba(255,255,255,0.15); }
+        @media (max-width: 768px) {
+            .tech-hero {
+                background: linear-gradient(to bottom, rgba(4,16,12,0.72) 0%, rgba(4,16,12,0.48) 50%, rgba(4,16,12,0.75) 100%), url('images for empowerment/ai-nuclear-energy-future-innovation-disruptive-technology.jpg') center/cover no-repeat;
+                padding: 90px 20px;
+            }
+            .tech-hero h1 { font-size: 2rem; }
+            .tech-hero p { font-size: 1rem; }
+            .section-heading { font-size: 1.7rem; }
+            .cta-box { padding: 40px 24px; }
+            .cta-box h2 { font-size: 1.6rem; }
+            .stat-item h3 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <a href="mailto:asuwajuodusote@aohfs.com">
+                        <i class="fas fa-envelope"></i> asuwajuodusote@aohfs.com
+                    </a>
+                    <a href="tel:+2348166931129">
+                        <i class="fas fa-phone"></i> +234 816 693 1129
+                    </a>
+                    <a href="tel:+2348064749422">
+                        <i class="fas fa-phone"></i> +234 806 474 9422
+                    </a>
+                </div>
+                <div class="top-bar-right">
+                    <a href="volunteer.html">Become a Volunteer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <div class="logo">
+                    <a href="index.html"><img src="assets/images/logo.jpg" alt="AOHF Foundation" style="height: 60px; width: auto;"></a>
+                </div>
+                
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            About Us <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown">
+                            <li class="dropdown-item"><a href="who-we-are.html" class="dropdown-link">Who We Are</a></li>
+                            <li class="dropdown-item"><a href="our-team.html" class="dropdown-link">Our Team</a></li>
+                            <li class="dropdown-item"><a href="contact.html" class="dropdown-link">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            What We Do <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown">
+                            <li class="dropdown-item"><a href="food-distribution.html" class="dropdown-link">Food Distribution</a></li>
+                            <li class="dropdown-item"><a href="clean-water.html" class="dropdown-link">Clean Water Project</a></li>
+                            <li class="dropdown-item"><a href="orphan-support.html" class="dropdown-link">Orphan and Widow Support</a></li>
+                            <li class="dropdown-item"><a href="emergency-relief.html" class="dropdown-link">Emergency Relief</a></li>
+                            <li class="dropdown-item"><a href="education.html" class="dropdown-link">Education Programs</a></li>
+                            <li class="dropdown-item"><a href="healthcare.html" class="dropdown-link">Healthcare Initiatives</a></li>
+                            <li class="dropdown-item"><a href="mosque-construction.html" class="dropdown-link">Mosque Construction</a></li>
+                            <li class="dropdown-item"><a href="srhr.html" class="dropdown-link">SRHR</a></li>
+                            <li class="dropdown-item"><a href="youth-tech-empowerment.html" class="dropdown-link">Empowerment and Youth Development</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Get Involved <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown">
+                            <li class="dropdown-item"><a href="support.html" class="dropdown-link">Support Our Work</a></li>
+                            <li class="dropdown-item"><a href="donate.html" class="dropdown-link">Ways to Donate</a></li>
+                            <li class="dropdown-item"><a href="volunteer.html" class="dropdown-link">Volunteer with AOHF</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Impact <i class="fas fa-chevron-down dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown">
+                            <li class="dropdown-item"><a href="success-stories.html" class="dropdown-link">Success Stories</a></li>
+                            <li class="dropdown-item"><a href="testimonials.html" class="dropdown-link">Beneficiary Testimonials</a></li>
+                            <li class="dropdown-item"><a href="gallery.html" class="dropdown-link">Gallery</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="donate.html" class="btn btn-primary">Donate Now</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="tech-hero">
+        <div class="container">
+            <span class="hero-badge"><i class="fas fa-microchip"></i> &nbsp; Technology &amp; Innovation</span>
+            <h1>Empowerment and Youth Development Program</h1>
+            <p>Equipping the next generation of Nigerian innovators with world-class technology skills — from electronics and robotics to software development, cybersecurity, and beyond.</p>
+            <a href="volunteer.html" class="btn btn-secondary" style="margin-right: 12px;">Get Involved</a>
+            <a href="donate.html" class="btn" style="background: rgba(255,255,255,0.2); color: #fff; border: 2px solid rgba(255,255,255,0.5);">Support This Program</a>
+        </div>
+    </section>
+
+    <!-- Why This Program -->
+    <section class="why-section">
+        <div class="container">
+            <p class="section-label">Our Vision</p>
+            <h2 class="section-heading">Why Technology Empowerment?</h2>
+            <p class="section-subtext">Nigeria has over 60% of its population under the age of 25. This generation holds the key to the country's future — but only if they are equipped with the right tools and knowledge to thrive in an increasingly digital, automated world.</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-globe-africa"></i></div>
+                    <h4>Bridge the Digital Divide</h4>
+                    <p>Millions of Nigerian youths lack access to quality technology education. Our program brings world-class tech training directly to underserved communities, leveling the playing field.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-briefcase"></i></div>
+                    <h4>Create Economic Opportunity</h4>
+                    <p>Technology skills are among the highest-paying in the global market. We train youths to build sustainable careers and businesses, reducing unemployment and poverty from the inside out.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h4>Spark Innovation</h4>
+                    <p>The world's problems will be solved by innovators. By teaching robotics, embedded systems, and software development, we create problem-solvers who build solutions for Africa and the world.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-hands-helping"></i></div>
+                    <h4>Build Community Resilience</h4>
+                    <p>Technically skilled community members become local assets — fixing infrastructure, creating local tech enterprises, and mentoring the next wave of learners in their own neighborhoods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Programs -->
+    <section class="programs-section">
+        <div class="container">
+            <p class="section-label">What We Teach</p>
+            <h2 class="section-heading">Our Technology Curriculum</h2>
+            <p class="section-subtext">Our program covers the full spectrum of modern technology — from hands-on hardware to cutting-edge software. Every module is designed to be practical, project-based, and career-ready.</p>
+
+            <div class="tech-grid">
+
+                <!-- Electronics -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Electronics &amp; Circuit Design</h3>
+                    <p>The foundation of all technology. Participants learn how electronic components work together to power the devices we use every day — from mobile phones to medical equipment.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Basic electronics principles (voltage, current, resistance)</li>
+                        <li><i class="fas fa-check-circle"></i> Reading and designing circuit schematics</li>
+                        <li><i class="fas fa-check-circle"></i> Soldering, PCB assembly, and troubleshooting</li>
+                        <li><i class="fas fa-check-circle"></i> Sensors, actuators, and signal processing</li>
+                        <li><i class="fas fa-check-circle"></i> Power electronics and solar energy systems</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world project: Build a functional electronic device</li>
+                    </ul>
+                </div>
+
+                <!-- Embedded Systems -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Embedded Systems &amp; Microcontrollers</h3>
+                    <p>The intelligence inside machines. Participants learn to program microcontrollers that control everything from smart home devices to industrial machinery and medical instruments.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Introduction to Arduino, ESP32, and STM32</li>
+                        <li><i class="fas fa-check-circle"></i> C/C++ programming for embedded systems</li>
+                        <li><i class="fas fa-check-circle"></i> Interfacing with displays, motors, and sensors</li>
+                        <li><i class="fas fa-check-circle"></i> Communication protocols: UART, SPI, I2C, WiFi, Bluetooth</li>
+                        <li><i class="fas fa-check-circle"></i> IoT (Internet of Things) device development</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world project: Build a smart automation system</li>
+                    </ul>
+                </div>
+
+                <!-- Robotics -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Robotics &amp; Automation</h3>
+                    <p>Building machines that move, think, and act. Robotics training brings together electronics, programming, and mechanical thinking in the most exciting way possible.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Robot mechanics: motors, servos, and chassis design</li>
+                        <li><i class="fas fa-check-circle"></i> Sensor integration: ultrasonic, IR, camera, gyroscope</li>
+                        <li><i class="fas fa-check-circle"></i> Autonomous navigation and obstacle avoidance</li>
+                        <li><i class="fas fa-check-circle"></i> Robot Operating System (ROS) fundamentals</li>
+                        <li><i class="fas fa-check-circle"></i> Industrial automation and conveyor systems</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world project: Build and program a functional robot</li>
+                    </ul>
+                </div>
+
+                <!-- Software Development -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-code"></i></div>
+                    <h3>Software Development</h3>
+                    <p>From idea to application. Participants learn the art and science of building software — the programs, systems, and tools that power modern business and daily life.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Programming fundamentals: Python, JavaScript, C++</li>
+                        <li><i class="fas fa-check-circle"></i> Data structures, algorithms, and problem solving</li>
+                        <li><i class="fas fa-check-circle"></i> Object-Oriented Programming (OOP) principles</li>
+                        <li><i class="fas fa-check-circle"></i> Database design: SQL and NoSQL</li>
+                        <li><i class="fas fa-check-circle"></i> APIs, version control (Git), and agile development</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world project: Build and deploy a software application</li>
+                    </ul>
+                </div>
+
+                <!-- Web & App Development -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Website &amp; App Development</h3>
+                    <p>Build the digital face of the future. This module takes participants from zero to full-stack developer, capable of creating modern websites and mobile applications for real clients.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> HTML5, CSS3, and responsive design principles</li>
+                        <li><i class="fas fa-check-circle"></i> JavaScript, React.js, and modern frontend frameworks</li>
+                        <li><i class="fas fa-check-circle"></i> Backend development: Node.js, Django, or Laravel</li>
+                        <li><i class="fas fa-check-circle"></i> Mobile app development with React Native or Flutter</li>
+                        <li><i class="fas fa-check-circle"></i> Deployment, hosting, and domain management</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world project: Build and launch a live website or app</li>
+                    </ul>
+                </div>
+
+                <!-- Cybersecurity -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Cybersecurity</h3>
+                    <p>Defend the digital world. As cyberattacks grow globally, trained cybersecurity professionals are among the most in-demand experts. We teach participants how to protect systems, networks, and data.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Networking fundamentals: TCP/IP, DNS, firewalls, VPNs</li>
+                        <li><i class="fas fa-check-circle"></i> Ethical hacking and penetration testing basics</li>
+                        <li><i class="fas fa-check-circle"></i> Common threats: malware, phishing, social engineering</li>
+                        <li><i class="fas fa-check-circle"></i> Security protocols and encryption</li>
+                        <li><i class="fas fa-check-circle"></i> Incident response and digital forensics</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world project: Conduct a simulated security audit</li>
+                    </ul>
+                </div>
+
+                <!-- Cloud Computing & DevOps -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Computing &amp; DevOps</h3>
+                    <p>The backbone of every modern digital business. Nearly all software today runs in the cloud. We teach participants to deploy, manage, and scale applications on the world's leading platforms.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Cloud fundamentals: AWS, Google Cloud, Azure</li>
+                        <li><i class="fas fa-check-circle"></i> Linux administration and server management</li>
+                        <li><i class="fas fa-check-circle"></i> Docker, Kubernetes, and containerisation</li>
+                        <li><i class="fas fa-check-circle"></i> CI/CD pipelines: GitHub Actions, Jenkins</li>
+                        <li><i class="fas fa-check-circle"></i> Infrastructure as Code (Terraform, Ansible)</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world project: Deploy a full application to the cloud</li>
+                    </ul>
+                </div>
+
+                <!-- AI & Data Science -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Artificial Intelligence &amp; Data Science</h3>
+                    <p>The technology reshaping every industry. Participants learn how to collect, analyze, and visualize data — and how to build AI-powered tools that can make smart decisions automatically.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Python for data analysis (Pandas, NumPy, Matplotlib)</li>
+                        <li><i class="fas fa-check-circle"></i> Machine learning fundamentals with Scikit-learn</li>
+                        <li><i class="fas fa-check-circle"></i> Deep learning and neural networks (TensorFlow/Keras)</li>
+                        <li><i class="fas fa-check-circle"></i> Natural Language Processing (NLP) basics</li>
+                        <li><i class="fas fa-check-circle"></i> AI ethics, bias, and responsible development</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world project: Build and train an AI model</li>
+                    </ul>
+                </div>
+
+                <!-- Blockchain & Web3 -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-link"></i></div>
+                    <h3>Blockchain &amp; Web3 Development</h3>
+                    <p>The next evolution of the internet. Blockchain technology is reshaping finance, supply chains, identity systems, and creative ownership. We train participants to build decentralised applications that matter.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Blockchain fundamentals and how distributed ledgers work</li>
+                        <li><i class="fas fa-check-circle"></i> Smart contract development with Solidity</li>
+                        <li><i class="fas fa-check-circle"></i> Ethereum, Solana, and multi-chain ecosystems</li>
+                        <li><i class="fas fa-check-circle"></i> DeFi, NFTs, and tokenisation models</li>
+                        <li><i class="fas fa-check-circle"></i> Web3 frontend integration with wagmi and ethers.js</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world project: Deploy a live smart contract and dApp</li>
+                    </ul>
+                </div>
+
+                <!-- Extended Reality -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-vr-cardboard"></i></div>
+                    <h3>Extended Reality (AR / VR / XR)</h3>
+                    <p>The metaverse is arriving faster than most expect. AR and VR are already transforming healthcare, education, retail, and training. We equip participants to design and build immersive experiences.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Foundations of 3D design and spatial computing</li>
+                        <li><i class="fas fa-check-circle"></i> Unity and Unreal Engine for XR development</li>
+                        <li><i class="fas fa-check-circle"></i> Augmented Reality with ARKit and ARCore</li>
+                        <li><i class="fas fa-check-circle"></i> VR headset development and interaction design</li>
+                        <li><i class="fas fa-check-circle"></i> XR applications in education, health, and industry</li>
+                        <li><i class="fas fa-check-circle"></i> Real-world project: Build and publish an AR/VR experience</li>
+                    </ul>
+                </div>
+
+                <!-- Digital Entrepreneurship -->
+                <div class="tech-card">
+                    <div class="tech-card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Digital Entrepreneurship &amp; Freelancing</h3>
+                    <p>Skills without application create no income. This module teaches participants how to monetize their technology skills, build freelance careers, and launch their own tech businesses from day one.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Freelancing on Upwork, Fiverr, and Toptal</li>
+                        <li><i class="fas fa-check-circle"></i> Tech startup ideation and business model development</li>
+                        <li><i class="fas fa-check-circle"></i> Building a professional portfolio and personal brand</li>
+                        <li><i class="fas fa-check-circle"></i> Client communication and project management</li>
+                        <li><i class="fas fa-check-circle"></i> Digital marketing and social media for tech businesses</li>
+                        <li><i class="fas fa-check-circle"></i> Accessing local and international funding opportunities</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section class="impact-banner">
+        <div class="container">
+            <p class="section-label" style="color: rgba(255,255,255,0.7);">Our Impact</p>
+            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 10px;">Changing Lives Through Technology</h2>
+            <p style="opacity: 0.85; max-width: 600px; margin: 0 auto; line-height: 1.7;">Every youth we train becomes a multiplier — teaching others, creating jobs, and solving community problems with technology.</p>
+            <div class="stats-row">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Youths Targeted for Training</p>
+                </div>
+                <div class="stat-item">
+                    <h3>8</h3>
+                    <p>Technology Tracks</p>
+                </div>
+                <div class="stat-item">
+                    <h3>6</h3>
+                    <p>Months Per Cohort</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Free for Participants</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Roadmap -->
+    <section class="curriculum-section">
+        <div class="container">
+            <p class="section-label">How It Works</p>
+            <h2 class="section-heading">Program Structure</h2>
+            <p class="section-subtext">Our program is structured as an intensive 6-month cohort that takes participants from complete beginner to job-ready professional through a blend of classroom learning, hands-on projects, and mentorship.</p>
+            <div class="curriculum-list">
+                <div class="curriculum-item">
+                    <div class="num">1</div>
+                    <div>
+                        <h5>Month 1 — Foundations</h5>
+                        <p>Introduction to electronics, basic programming concepts, computer literacy, and understanding the digital economy. No prior experience needed.</p>
+                    </div>
+                </div>
+                <div class="curriculum-item">
+                    <div class="num">2</div>
+                    <div>
+                        <h5>Month 2 — Core Skills</h5>
+                        <p>Participants choose a primary track: Hardware (Electronics/Embedded/Robotics) or Software (Web Dev / App Dev / Software Dev). Deep dives begin.</p>
+                    </div>
+                </div>
+                <div class="curriculum-item">
+                    <div class="num">3</div>
+                    <div>
+                        <h5>Month 3 — Specialization</h5>
+                        <p>Advanced modules in chosen track. Cross-disciplinary sessions on AI, cybersecurity, and IoT. Real projects begin with team collaboration.</p>
+                    </div>
+                </div>
+                <div class="curriculum-item">
+                    <div class="num">4</div>
+                    <div>
+                        <h5>Month 4 — Applied Projects</h5>
+                        <p>Participants build full, real-world projects addressing actual community needs. Mentors from industry guide each team through the process.</p>
+                    </div>
+                </div>
+                <div class="curriculum-item">
+                    <div class="num">5</div>
+                    <div>
+                        <h5>Month 5 — Business &amp; Freelancing</h5>
+                        <p>Digital entrepreneurship module. Participants create portfolios, set up freelance profiles, pitch projects, and learn client management.</p>
+                    </div>
+                </div>
+                <div class="curriculum-item">
+                    <div class="num">6</div>
+                    <div>
+                        <h5>Month 6 — Demo Day &amp; Launch</h5>
+                        <p>Final project presentations to community leaders, sponsors, and potential employers. Graduation ceremony and certificates awarded. Career placement support begins.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Can Apply -->
+    <section class="why-section" style="background: #fff; padding: 80px 20px;">
+        <div class="container">
+            <p class="section-label">Eligibility</p>
+            <h2 class="section-heading">Who Can Apply?</h2>
+            <p class="section-subtext">Our program is intentionally open and inclusive. We believe talent is everywhere — access is not. We specifically prioritize those who need this opportunity most.</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h4>Ages 15 – 35</h4>
+                    <p>Open to secondary school students, university graduates, and young professionals seeking to pivot into the tech industry.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-venus-mars"></i></div>
+                    <h4>All Genders Welcome</h4>
+                    <p>We actively encourage young women to apply. Gender balance in tech is a priority — 40% of our cohort slots are reserved for female applicants.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h4>Underserved Communities</h4>
+                    <p>Priority is given to applicants from rural areas, low-income backgrounds, and communities with limited access to quality education.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon"><i class="fas fa-star"></i></div>
+                    <h4>No Experience Needed</h4>
+                    <p>We start from the very basics. All you need is commitment, curiosity, and the desire to learn. We handle everything else — including devices and materials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-box">
+            <h2>Be Part of This Movement</h2>
+            <p>Whether you are a young person who wants to learn, a professional who wants to mentor, an organization looking to partner, or a donor who wants to invest in the next generation — there is a place for you in this program.</p>
+            <div class="cta-buttons">
+                <a href="volunteer.html" class="btn-white"><i class="fas fa-hands-helping"></i> Volunteer or Mentor</a>
+                <a href="donate.html" class="btn-outline-white"><i class="fas fa-hand-holding-heart"></i> Support This Program</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About AOHF</h3>
+                    <p>Asuwaju Odusote Humanitarian Foundation is dedicated to improving lives through sustainable humanitarian programs, providing essential services to vulnerable communities worldwide.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61587400866153" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/aohf_foundation" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@aohffoundation" target="_blank" class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://x.com/Aohf_foundation" target="_blank" class="social-icon">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="who-we-are.html">Who We Are</a>
+                        <a href="our-team.html">Our Team</a>
+                        <a href="success-stories.html">Success Stories</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Programs</h3>
+                    <div class="footer-links">
+                        <a href="food-distribution.html">Food Distribution</a>
+                        <a href="clean-water.html">Clean Water Project</a>
+                        <a href="education.html">Education Programs</a>
+                        <a href="healthcare.html">Healthcare Initiatives</a>
+                        <a href="emergency-relief.html">Emergency Relief</a>
+                        <a href="youth-tech-empowerment.html">Empowerment and Youth Development</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> asuwajuodusote@aohfs.com</p>
+                    <p><i class="fas fa-phone"></i> +234 816 693 1129</p>
+                    <p><i class="fas fa-phone"></i> +234 806 474 9422</p>
+                    <p style="margin-top: 20px;"><strong>Get Involved:</strong></p>
+                    <a href="donate.html" class="btn btn-secondary" style="margin-top: 10px; display: inline-block;">Donate Now</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Asuwaju Odusote Humanitarian Foundation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
